@@ -1,0 +1,29 @@
+﻿<button type="button"
+        ng-click="api.editBlock(block, block.hideContentInOverlay, index, parentForm)"
+        style="height: auto; padding: 0; width:100%; overflow:hidden;"
+        class="btn-reset umb-outline blockelement-labelblock-editor blockelement__draggable-element ng-scope ui-sortable-handle">
+    <section class="wrapper style3">
+        <div class="inner" style="width:100%;">
+            <header class="align-center">
+                <p>
+                    {{ block.data.citation }}
+                </p>
+                <h2>{{ block.data.quoteText }}</h2>
+            </header>
+        </div>
+    </section>
+</button>
+
+<!-- partially working inline edit -->
+<!--<div style="height: auto; padding: 0; width:100%; overflow:hidden;"
+     class="umb-outline ng-scope">
+    <section class="wrapper style3">
+        <div class="inner" style="width:100%;">
+            <header class="align-center">
+                <p contenteditable="true" ng-model="block.data.citation">
+                </p>
+                <h2 contenteditable="true" ng-model="block.data.quoteText"></h2>
+            </header>
+        </div>
+    </section>
+</div>-->

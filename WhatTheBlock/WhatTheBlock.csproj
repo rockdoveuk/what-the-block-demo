@@ -294,6 +294,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\BlockList.generated.cs" />
+    <Compile Include="App_Data\Models\File.generated.cs" />
+    <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\Gallery.generated.cs" />
+    <Compile Include="App_Data\Models\Hero.generated.cs" />
+    <Compile Include="App_Data\Models\HeroSlide.generated.cs" />
+    <Compile Include="App_Data\Models\Image.generated.cs" />
+    <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\Quote.generated.cs" />
+    <Compile Include="App_Data\Models\Service.generated.cs" />
+    <Compile Include="App_Data\Models\ServiceList.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +330,12 @@
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
+    <Content Include="Views\BlockList.cshtml" />
+    <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\Partials\BlockList\Components\Hero.cshtml" />
+    <Content Include="Views\Partials\BlockList\Components\Gallery.cshtml" />
+    <Content Include="Views\Partials\BlockList\Components\ServiceList.cshtml" />
+    <Content Include="Views\Partials\BlockList\Components\Quote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

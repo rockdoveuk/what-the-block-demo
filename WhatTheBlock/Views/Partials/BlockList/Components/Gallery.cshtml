@@ -1,0 +1,24 @@
+﻿@inherits UmbracoViewPage<BlockListItem>
+@using Umbraco.Core.Models.Blocks
+@{
+    var content = Model.Content as Gallery;
+}
+
+<section id="three" class="wrapper style2">
+    <div class="inner">
+        <header class="align-center">
+            <p class="special">@content.LeadText</p>
+            <h2>@content.Heading</h2>
+        </header>
+        <div class="gallery">
+            @foreach (var photo in content.Photos)
+            {
+                <div>
+                    <div class="image fit">
+                        <a href="@photo.Url()"><img src="@photo.Url()" alt="" /></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

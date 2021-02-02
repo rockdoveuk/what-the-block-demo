@@ -1,0 +1,12 @@
+﻿<section class="banner full" ng-click="block.edit()">
+    <article ng-repeat="slide in block.data.slides.contentData">
+        <img src="/images/slide01.jpg" alt="" /> <!--{{ slide.background }}-->
+        <div class="inner">
+            <header>
+                <p>{{ slide.leadText }}</p>
+                <h2>{{ slide.heading }}</h2>
+            </header>
+        </div>
+    </article>
+
+</section>

@@ -1,0 +1,21 @@
+﻿@inherits UmbracoViewPage<BlockListItem>
+@using Umbraco.Core.Models.Blocks
+@{
+    var content = Model.Content as Hero;
+}
+
+<section class="banner full">
+    @foreach (var slide in content.Slides.Select(x=>x.Content as HeroSlide))
+    {
+        <article>
+            <img src="@slide.Background.Url()" alt="" />
+            <div class="inner">
+                <header>
+                    <p>@slide.LeadText</p>
+                    <h2>@slide.Heading</h2>
+                </header>
+            </div>
+        </article>
+    }
+
+</section>
