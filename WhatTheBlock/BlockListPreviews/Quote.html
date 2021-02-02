@@ -4,16 +4,22 @@
         class="btn-reset umb-outline blockelement-labelblock-editor blockelement__draggable-element ng-scope ui-sortable-handle">
     <section class="wrapper style3">
         <div class="inner" style="width:100%;">
-            <header class="align-center">
+            <header class="align-center" ng-if="block.settingsData.showQuoteBeforeCitation != 1">
                 <p>
                     {{ block.data.citation }}
                 </p>
                 <h2>{{ block.data.quoteText }}</h2>
             </header>
+            <header class="align-center" ng-if="block.settingsData.showQuoteBeforeCitation == 1">
+                <h2>
+                    {{ block.data.quoteText }}</h2>
+                <p>
+                    {{ block.data.citation }}
+                </p>
+            </header>
         </div>
     </section>
 </button>
-
 <!-- partially working inline edit -->
 <!--<div style="height: auto; padding: 0; width:100%; overflow:hidden;"
      class="umb-outline ng-scope">

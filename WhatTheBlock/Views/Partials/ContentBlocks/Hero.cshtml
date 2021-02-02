@@ -1,0 +1,21 @@
+﻿@using Perplex.ContentBlocks.Rendering;
+@model IContentBlockViewModel<HeroNC>
+@{
+    var content = Model.Content;
+}
+
+<section class="banner full">
+    @foreach (var slide in content.Slides)
+    {
+        <article>
+            <img src="@slide.Background.Url()" alt="" />
+            <div class="inner">
+                <header>
+                    <p>@slide.LeadText</p>
+                    <h2>@slide.Heading</h2>
+                </header>
+            </div>
+        </article>
+    }
+
+</section>

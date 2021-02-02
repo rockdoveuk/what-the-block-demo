@@ -2,12 +2,21 @@
 @using Umbraco.Core.Models.Blocks
 @{
     var content = Model.Content as Quote;
+    var settings = Model.Settings as QuoteSettings;
 }
 <section class="wrapper style3">
     <div class="inner">
         <header class="align-center">
-            <p>@content.Citation</p>
-            <h2>@content.QuoteText</h2>
+            @if (settings.ShowQuoteBeforeCitation)
+            {
+                <h2>@content.QuoteText</h2>
+                <p>@content.Citation</p>
+            }
+            else
+            {
+                <p>@content.Citation</p>
+                <h2>@content.QuoteText</h2>
+            }
         </header>
     </div>
 </section>

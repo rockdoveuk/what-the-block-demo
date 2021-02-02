@@ -1,0 +1,13 @@
+﻿@using Perplex.ContentBlocks.Rendering;
+@model IContentBlockViewModel<Quote>
+@{
+    var content = Model.Content;
+}
+<section class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+            <p>@content.Citation</p>
+            <h2>@content.QuoteText</h2>
+        </header>
+    </div>
+</section>

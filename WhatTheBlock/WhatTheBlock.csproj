@@ -144,6 +144,9 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Perplex.ContentBlocks, Version=1.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Perplex.ContentBlocks.Core.1.6.3\lib\net472\Perplex.ContentBlocks.dll</HintPath>
+    </Reference>
     <Reference Include="Semver, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Semver.2.0.4\lib\net452\Semver.dll</HintPath>
     </Reference>
@@ -270,6 +273,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\Perplex.ContentBlocks\assets\icons.svg" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\components\perplex.content-block.component.html" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\components\perplex.content-block.component.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\components\perplex.content-blocks.icon.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\configuration\perplex.content-blocks.configuration.structure.html" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\configuration\perplex.content-blocks.configuration.structure.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\lang\da-DK.xml" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\lang\en-US.xml" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\lang\nl-NL.xml" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\lib\angular-slick.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\lib\slick.min.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\perplex.content-blocks.api.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\perplex.content-blocks.controller.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\perplex.content-blocks.css" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\perplex.content-blocks.html" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\perplex.content-blocks.requires.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\perplex.content-blocks.copy-paste-service.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\perplex.content-blocks.utils.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\property\perplex.content-blocks.property-scaffold-cache.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\property\perplex.content-blocks.property.html" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\property\perplex.content-blocks.property.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\tab-focus\perplex.content-blocks.tab-focus-once.directive.js" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\tab-focus\perplex.content-blocks.tab-focus.service.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -295,16 +321,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\Models\BlockList.generated.cs" />
+    <Compile Include="App_Data\Models\ContentBlocks.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Gallery.generated.cs" />
     <Compile Include="App_Data\Models\Hero.generated.cs" />
+    <Compile Include="App_Data\Models\HeroNC.generated.cs" />
     <Compile Include="App_Data\Models\HeroSlide.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\Quote.generated.cs" />
+    <Compile Include="App_Data\Models\QuoteSettings.generated.cs" />
     <Compile Include="App_Data\Models\Service.generated.cs" />
     <Compile Include="App_Data\Models\ServiceList.generated.cs" />
+    <Compile Include="App_Data\Models\ServiceListNC.generated.cs" />
+    <Compile Include="App_Start\ContentBlockComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +350,14 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="BlockListPreviews\Quote.html" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\tab-focus\package.manifest" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\property\package.manifest" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\utils\package.manifest" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\package.manifest" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\lib\package.manifest" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\configuration\package.manifest" />
+    <Content Include="App_Plugins\Perplex.ContentBlocks\components\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -336,6 +375,13 @@
     <Content Include="Views\Partials\BlockList\Components\Gallery.cshtml" />
     <Content Include="Views\Partials\BlockList\Components\ServiceList.cshtml" />
     <Content Include="Views\Partials\BlockList\Components\Quote.cshtml" />
+    <Content Include="BlockListPreviews\Hero.html" />
+    <Content Include="Views\Partials\ContentBlocks\Gallery.cshtml" />
+    <Content Include="Views\Partials\ContentBlocks\Hero.cshtml" />
+    <Content Include="Views\Partials\ContentBlocks\Quote.cshtml" />
+    <Content Include="Views\Partials\ContentBlocks\ServiceList.cshtml" />
+    <Content Include="Views\Partials\ContentBlocks\Quote2.cshtml" />
+    <Content Include="Views\ContentBlocks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
