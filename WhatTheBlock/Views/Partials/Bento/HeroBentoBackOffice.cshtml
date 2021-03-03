@@ -1,0 +1,11 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HeroBento>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+
+@foreach (var slide in Model.Slides.Take(1))
+{
+    foreach (var area in slide.Areas.Where(x => x.Content != null))
+    {
+        @Html.Partial($"~/Views/Partials/Bento/{area.Content.ContentType.Alias}BackOffice.cshtml", area.Content)
+    }
+}

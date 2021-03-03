@@ -1,0 +1,31 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Service>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    var service = Model;
+}
+
+<section class="wrapper style2">
+    <div class="inner" style="width:auto;">
+        <div class="grid-style">
+
+            <div style="margin: 0 auto">
+                <div class="box">
+                    <div class="image fit">
+                        <img src="@service.Image.Url()" alt="" />
+                    </div>
+                    <div class="content">
+                        <header class="align-center">
+                            <p>@service.LeadText</p>
+                            <h2>@service.Heading</h2>
+                        </header>
+                        @service.Description
+                        <footer class="align-center">
+                            <a href="@service.Link.Url" target="@service.Link.Target" class="button alt">@service.Link.Name</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

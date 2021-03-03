@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Service</summary>
 	[PublishedModel("service")]
-	public partial class Service : PublishedElementModel
+	public partial class Service : PublishedElementModel, IBentoItemComposition
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant

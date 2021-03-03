@@ -1,0 +1,13 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.IQuote>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    var content = Model;
+}
+<section class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+            <p>@content.Citation</p>
+            <h2>@content.QuoteText</h2>
+        </header>
+    </div>
+</section>

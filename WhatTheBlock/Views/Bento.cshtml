@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Bento>
+@using Bento.Core.Models;
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+@foreach (StackItem item in Model.BentoItems)
+{
+    @Html.Partial($"~/Views/Partials/Bento/layouts/{item.Alias}.cshtml", item)
+}

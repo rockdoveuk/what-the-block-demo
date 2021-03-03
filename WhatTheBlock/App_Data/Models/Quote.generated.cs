@@ -19,9 +19,22 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace Umbraco.Web.PublishedModels
 {
+	// Mixin Content Type with alias "quote"
+	/// <summary>Quote</summary>
+	public partial interface IQuote : IPublishedElement
+	{
+		/// <summary>Citation</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		string Citation { get; }
+
+		/// <summary>Quote text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		string QuoteText { get; }
+	}
+
 	/// <summary>Quote</summary>
 	[PublishedModel("quote")]
-	public partial class Quote : PublishedElementModel
+	public partial class Quote : PublishedElementModel, IQuote
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -49,13 +62,21 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		[ImplementPropertyType("citation")]
-		public string Citation => this.Value<string>("citation");
+		public string Citation => GetCitation(this);
+
+		/// <summary>Static getter for Citation</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		public static string GetCitation(IQuote that) => that.Value<string>("citation");
 
 		///<summary>
 		/// Quote text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
 		[ImplementPropertyType("quoteText")]
-		public string QuoteText => this.Value<string>("quoteText");
+		public string QuoteText => GetQuoteText(this);
+
+		/// <summary>Static getter for Quote text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.11.1")]
+		public static string GetQuoteText(IQuote that) => that.Value<string>("quoteText");
 	}
 }

@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Hero (NC)</summary>
 	[PublishedModel("heroNC")]
-	public partial class HeroNC : PublishedElementModel
+	public partial class HeroNC : PublishedElementModel, IBentoItemComposition
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant

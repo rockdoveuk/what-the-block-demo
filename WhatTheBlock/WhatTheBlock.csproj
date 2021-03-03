@@ -47,6 +47,9 @@
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\packages\AngleSharp.0.9.11\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Bento.Core, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bento.Core.2.0.1\lib\net45\Bento.Core.dll</HintPath>
+    </Reference>
     <Reference Include="ClientDependency.Core, Version=1.9.9.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClientDependency.1.9.9\lib\net45\ClientDependency.Core.dll</HintPath>
     </Reference>
@@ -273,6 +276,74 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\BentoRelationshipManager\relationshipmanager.controller.js" />
+    <Content Include="App_Plugins\BentoRelationshipManager\relationshipmanager.html" />
+    <Content Include="App_Plugins\Bento\bento.convert.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.convert.html" />
+    <Content Include="App_Plugins\Bento\bento.convert.map.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.convert.map.html" />
+    <Content Include="App_Plugins\Bento\bento.create.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.create.html" />
+    <Content Include="App_Plugins\Bento\bento.edit.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.edit.html" />
+    <Content Include="App_Plugins\Bento\bento.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.editor.html" />
+    <Content Include="App_Plugins\Bento\bento.grid.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.grid.editor.html" />
+    <Content Include="App_Plugins\Bento\bento.layouts.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.layouts.editor.html" />
+    <Content Include="App_Plugins\Bento\bento.stack.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.stack.editor.html" />
+    <Content Include="App_Plugins\Bento\bento.stack.settings.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\bento.stack.settings.editor.html" />
+    <Content Include="App_Plugins\Bento\Css\bento.css" />
+    <Content Include="App_Plugins\Bento\Css\bento.min.css" />
+    <Content Include="App_Plugins\Bento\Css\bento.previews.css" />
+    <Content Include="App_Plugins\Bento\Css\bento.previews.min.css" />
+    <Content Include="App_Plugins\Bento\Directives\Components\bentoblockpreview.component.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\bentoblocksettingspreview.component.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\blockdoctypegrid.directive.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\blockpicker.directive.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\layout.directive.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\layout.preview.directive.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\setting.directive.js" />
+    <Content Include="App_Plugins\Bento\Directives\Components\setting.edit.directive.js" />
+    <Content Include="App_Plugins\Bento\Lang\en-US.xml" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bento.credits.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bento.credits.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentolayout.edit.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentolayout.edit.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentolayout.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentolayout.editor.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentolayoutarea.edit.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentolayoutarea.edit.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentoprevalue.edit.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentoprevalue.edit.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentosetting.edit.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentosetting.edit.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentosettings.editor.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\bentosettings.editor.html" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\contenttypepicker.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\jscodeeditor.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\prevalueUmbEditor.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\singlecontenttypepicker.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\singlecssfilepicker.controller.js" />
+    <Content Include="App_Plugins\Bento\PreValueEditors\singlejsfilepicker.controller.js" />
+    <Content Include="App_Plugins\Bento\Resources\bento.resource.js" />
+    <Content Include="App_Plugins\Bento\Resources\bento.setting.factory.js" />
+    <Content Include="App_Plugins\Bento\Views\Components\bento-block-doc-type-grid.html" />
+    <Content Include="App_Plugins\Bento\Views\Components\bento-block-picker.html" />
+    <Content Include="App_Plugins\Bento\Views\Components\bento-layout-preview.html" />
+    <Content Include="App_Plugins\Bento\Views\Components\bento-layout.html" />
+    <Content Include="App_Plugins\Bento\Views\Components\bento-setting-edit.html" />
+    <Content Include="App_Plugins\Bento\Views\Components\bento-setting.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\contenttypepicker.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\jscodeeditor.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\prevalue-umb-editor.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\singlecontenttypepicker.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\singlecssfilepicker.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\singlejsfilepicker.html" />
+    <Content Include="App_Plugins\Bento\Views\PreValueEditors\singlerequiredcontenttypepicker.html" />
     <Content Include="App_Plugins\Perplex.ContentBlocks\assets\icons.svg" />
     <Content Include="App_Plugins\Perplex.ContentBlocks\components\perplex.content-block.component.html" />
     <Content Include="App_Plugins\Perplex.ContentBlocks\components\perplex.content-block.component.js" />
@@ -320,17 +391,23 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\Bento.generated.cs" />
+    <Compile Include="App_Data\Models\BentoItemComposition.generated.cs" />
+    <Compile Include="App_Data\Models\BentoItemTypeFolder.generated.cs" />
+    <Compile Include="App_Data\Models\BentoLibrary.generated.cs" />
     <Compile Include="App_Data\Models\BlockList.generated.cs" />
     <Compile Include="App_Data\Models\ContentBlocks.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Gallery.generated.cs" />
     <Compile Include="App_Data\Models\Hero.generated.cs" />
+    <Compile Include="App_Data\Models\HeroBento.generated.cs" />
     <Compile Include="App_Data\Models\HeroNC.generated.cs" />
     <Compile Include="App_Data\Models\HeroSlide.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\Quote.generated.cs" />
+    <Compile Include="App_Data\Models\QuoteReusable.generated.cs" />
     <Compile Include="App_Data\Models\QuoteSettings.generated.cs" />
     <Compile Include="App_Data\Models\Service.generated.cs" />
     <Compile Include="App_Data\Models\ServiceList.generated.cs" />
@@ -358,6 +435,17 @@
     <Content Include="App_Plugins\Perplex.ContentBlocks\lib\package.manifest" />
     <Content Include="App_Plugins\Perplex.ContentBlocks\configuration\package.manifest" />
     <Content Include="App_Plugins\Perplex.ContentBlocks\components\package.manifest" />
+    <Content Include="App_Plugins\Bento\package.manifest" />
+    <Content Include="App_Plugins\Bento\Css\bento.stack.scss" />
+    <Content Include="App_Plugins\Bento\Css\bento.scss" />
+    <Content Include="App_Plugins\Bento\Css\bento.previews.scss" />
+    <Content Include="App_Plugins\Bento\Css\bento.picker.scss" />
+    <Content Include="App_Plugins\Bento\Css\bento.layout.scss" />
+    <Content Include="App_Plugins\Bento\Css\bento.item.scss" />
+    <Content Include="App_Plugins\Bento\Css\bento.doctypepicker.scss" />
+    <Content Include="App_Plugins\Bento\bento-settings-schema.json" />
+    <Content Include="App_Plugins\Bento\bento-layouts-schema.json" />
+    <Content Include="App_Plugins\BentoRelationshipManager\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -382,6 +470,19 @@
     <Content Include="Views\Partials\ContentBlocks\ServiceList.cshtml" />
     <Content Include="Views\Partials\ContentBlocks\Quote2.cshtml" />
     <Content Include="Views\ContentBlocks.cshtml" />
+    <Content Include="Views\Partials\Bento\HeroSlide.cshtml" />
+    <Content Include="Views\Partials\Bento\HeroSlideBackOffice.cshtml" />
+    <Content Include="Views\Partials\Bento\HeroBento.cshtml" />
+    <Content Include="Views\Partials\Bento\HeroBentoBackOffice.cshtml" />
+    <Content Include="Views\Partials\Bento\Layouts\single.cshtml" />
+    <Content Include="Views\Bento.cshtml" />
+    <Content Include="Views\Partials\Bento\Gallery.cshtml" />
+    <Content Include="Views\Partials\Bento\QuoteReusable.cshtml" />
+    <Content Include="Views\Partials\Bento\Service.cshtml" />
+    <Content Include="Views\Partials\Bento\Layouts\double.cshtml" />
+    <Content Include="Views\Partials\Bento\GalleryBackOffice.cshtml" />
+    <Content Include="Views\Partials\Bento\QuoteReusableBackOffice.cshtml" />
+    <Content Include="Views\Partials\Bento\ServiceBackOffice.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -389,6 +490,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

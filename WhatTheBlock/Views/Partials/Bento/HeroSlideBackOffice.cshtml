@@ -1,0 +1,13 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HeroSlide>
+@using ContentModels = Umbraco.Web.PublishedModels;
+
+<section class="banner">
+    <article class="visible top" style="background-image:url(@Model.Background.Url())">
+        <div class="inner">
+            <header>
+                <p>@Model.LeadText</p>
+                <h2>@Model.Heading</h2>
+            </header>
+        </div>
+    </article>
+</section>

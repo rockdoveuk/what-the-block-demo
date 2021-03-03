@@ -21,7 +21,7 @@ namespace Umbraco.Web.PublishedModels
 {
 	/// <summary>Gallery</summary>
 	[PublishedModel("gallery")]
-	public partial class Gallery : PublishedElementModel
+	public partial class Gallery : PublishedElementModel, IBentoItemComposition
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
